@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD844966E293BFE57F180CF5 /* Pods_EatMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8557244CBD3BA8DAD924028 /* Pods_EatMe.framework */; };
+		C41ECBE12A4BB1FB007D6520 /* DishCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41ECBE02A4BB1FB007D6520 /* DishCellView.swift */; };
+		C41ECBE32A4C1E24007D6520 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41ECBE22A4C1E24007D6520 /* Color+Extension.swift */; };
+		C41ECBE72A4CE175007D6520 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41ECBE62A4CE175007D6520 /* BlueButtonView.swift */; };
+		C41ECBEA2A4CE4C9007D6520 /* DishFilterElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41ECBE92A4CE4C9007D6520 /* DishFilterElementView.swift */; };
+		C48153E42A4F9E080089A890 /* NavigationBarWithGeoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48153E32A4F9E080089A890 /* NavigationBarWithGeoView.swift */; };
+		C48153E62A50D9900089A890 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48153E52A50D9900089A890 /* StorageService.swift */; };
+		C48153E92A50DB690089A890 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C48153E82A50DB690089A890 /* Realm */; };
+		C48153EB2A50DB690089A890 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C48153EA2A50DB690089A890 /* RealmSwift */; };
+		C48153ED2A50DC1B0089A890 /* DishDataBaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48153EC2A50DC1B0089A890 /* DishDataBaseObject.swift */; };
+		C48153EF2A52367C0089A890 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48153EE2A52367C0089A890 /* LocationService.swift */; };
+		C488AC4E2A4B85BC0098370A /* EatMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC4D2A4B85BC0098370A /* EatMeApp.swift */; };
+		C488AC522A4B85C00098370A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C488AC512A4B85C00098370A /* Assets.xcassets */; };
+		C488AC552A4B85C00098370A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C488AC542A4B85C00098370A /* Preview Assets.xcassets */; };
+		C488AC5C2A4B88000098370A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC5B2A4B88000098370A /* CategoryView.swift */; };
+		C488AC5E2A4B884C0098370A /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC5D2A4B884C0098370A /* CartView.swift */; };
+		C488AC602A4B88810098370A /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC5F2A4B88810098370A /* DishView.swift */; };
+		C488AC622A4B890B0098370A /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC612A4B890B0098370A /* ProductDetailsView.swift */; };
+		C488AC6E2A4B898E0098370A /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC6D2A4B898E0098370A /* CategoryViewModel.swift */; };
+		C488AC712A4B89A80098370A /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC702A4B89A80098370A /* CartViewModel.swift */; };
+		C488AC742A4B89BE0098370A /* DishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC732A4B89BE0098370A /* DishViewModel.swift */; };
+		C488AC772A4B89D60098370A /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC762A4B89D60098370A /* ProductDetailsViewModel.swift */; };
+		C488AC7A2A4B8EB80098370A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC792A4B8EB80098370A /* Category.swift */; };
+		C488AC7C2A4B94320098370A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC7B2A4B94320098370A /* NetworkService.swift */; };
+		C488AC7E2A4B9B1B0098370A /* CategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC7D2A4B9B1B0098370A /* CategoryCellView.swift */; };
+		C488AC802A4B9FF30098370A /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC7F2A4B9FF30098370A /* Number+Extension.swift */; };
+		C488AC822A4BA3DC0098370A /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC812A4BA3DC0098370A /* Font+Extension.swift */; };
+		C488AC8F2A4BA5580098370A /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488AC862A4BA5580098370A /* SF-Pro-Display-Regular.otf */; };
+		C488AC912A4BA5580098370A /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488AC882A4BA5580098370A /* SF-Pro-Display-Medium.otf */; };
+		C488AC922A4BA5580098370A /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488AC892A4BA5580098370A /* SF-Pro-Display-Semibold.otf */; };
+		C488AC992A4BAC400098370A /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488AC982A4BAC400098370A /* Dish.swift */; };
+		C4F11E9F2A4E3511002DBB6D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F11E9E2A4E3511002DBB6D /* TabBarView.swift */; };
+		C4F11EA12A4E3D6E002DBB6D /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F11EA02A4E3D6E002DBB6D /* NavigationBarView.swift */; };
+		C4F11EC32A4F859D002DBB6D /* ProductDetailsSmallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F11EC22A4F859C002DBB6D /* ProductDetailsSmallButtonView.swift */; };
+		C4F11EC52A4F8D26002DBB6D /* CartQuantityButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F11EC42A4F8D26002DBB6D /* CartQuantityButtonView.swift */; };
+		C4F11EC72A4F9027002DBB6D /* CartDishCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F11EC62A4F9027002DBB6D /* CartDishCellView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		869F6D34D667107786848673 /* Pods-EatMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatMe.release.xcconfig"; path = "Target Support Files/Pods-EatMe/Pods-EatMe.release.xcconfig"; sourceTree = "<group>"; };
+		C41ECBE02A4BB1FB007D6520 /* DishCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCellView.swift; sourceTree = "<group>"; };
+		C41ECBE22A4C1E24007D6520 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		C41ECBE62A4CE175007D6520 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
+		C41ECBE92A4CE4C9007D6520 /* DishFilterElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishFilterElementView.swift; sourceTree = "<group>"; };
+		C48153E32A4F9E080089A890 /* NavigationBarWithGeoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWithGeoView.swift; sourceTree = "<group>"; };
+		C48153E52A50D9900089A890 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		C48153EC2A50DC1B0089A890 /* DishDataBaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDataBaseObject.swift; sourceTree = "<group>"; };
+		C48153EE2A52367C0089A890 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		C488AC4A2A4B85BC0098370A /* EatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C488AC4D2A4B85BC0098370A /* EatMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatMeApp.swift; sourceTree = "<group>"; };
+		C488AC512A4B85C00098370A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C488AC542A4B85C00098370A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C488AC5B2A4B88000098370A /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		C488AC5D2A4B884C0098370A /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		C488AC5F2A4B88810098370A /* DishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
+		C488AC612A4B890B0098370A /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		C488AC6D2A4B898E0098370A /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		C488AC702A4B89A80098370A /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		C488AC732A4B89BE0098370A /* DishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewModel.swift; sourceTree = "<group>"; };
+		C488AC762A4B89D60098370A /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		C488AC792A4B8EB80098370A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C488AC7B2A4B94320098370A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C488AC7D2A4B9B1B0098370A /* CategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellView.swift; sourceTree = "<group>"; };
+		C488AC7F2A4B9FF30098370A /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
+		C488AC812A4BA3DC0098370A /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		C488AC862A4BA5580098370A /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		C488AC882A4BA5580098370A /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		C488AC892A4BA5580098370A /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		C488AC982A4BAC400098370A /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		C4F11E9E2A4E3511002DBB6D /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		C4F11EA02A4E3D6E002DBB6D /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		C4F11EC22A4F859C002DBB6D /* ProductDetailsSmallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsSmallButtonView.swift; sourceTree = "<group>"; };
+		C4F11EC42A4F8D26002DBB6D /* CartQuantityButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartQuantityButtonView.swift; sourceTree = "<group>"; };
+		C4F11EC62A4F9027002DBB6D /* CartDishCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDishCellView.swift; sourceTree = "<group>"; };
+		C8557244CBD3BA8DAD924028 /* Pods_EatMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45A673136A967CD2F2D3349 /* Pods-EatMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatMe.debug.xcconfig"; path = "Target Support Files/Pods-EatMe/Pods-EatMe.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C488AC472A4B85BC0098370A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C48153EB2A50DB690089A890 /* RealmSwift in Frameworks */,
+				C48153E92A50DB690089A890 /* Realm in Frameworks */,
+				BD844966E293BFE57F180CF5 /* Pods_EatMe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2FB94962CDFF2AC5E51C767 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D45A673136A967CD2F2D3349 /* Pods-EatMe.debug.xcconfig */,
+				869F6D34D667107786848673 /* Pods-EatMe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C41ECBDB2A4BAF6F007D6520 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				C41ECBDD2A4BAF9F007D6520 /* Models */,
+				C488AC7B2A4B94320098370A /* NetworkService.swift */,
+				C48153EE2A52367C0089A890 /* LocationService.swift */,
+				C48153EC2A50DC1B0089A890 /* DishDataBaseObject.swift */,
+				C48153E52A50D9900089A890 /* StorageService.swift */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		C41ECBDC2A4BAF90007D6520 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC792A4B8EB80098370A /* Category.swift */,
+				C488AC982A4BAC400098370A /* Dish.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		C41ECBDD2A4BAF9F007D6520 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C41ECBDC2A4BAF90007D6520 /* Responses */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C41ECBDE2A4BAFB8007D6520 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC7D2A4B9B1B0098370A /* CategoryCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C41ECBDF2A4BB02E007D6520 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC512A4B85C00098370A /* Assets.xcassets */,
+				C488AC852A4BA5580098370A /* Fonts */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C41ECBE82A4CE436007D6520 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				C41ECBE62A4CE175007D6520 /* BlueButtonView.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		C488AC412A4B85BC0098370A = {
+			isa = PBXGroup;
+			children = (
+				C488AC4C2A4B85BC0098370A /* EatMe */,
+				C488AC4B2A4B85BC0098370A /* Products */,
+				B2FB94962CDFF2AC5E51C767 /* Pods */,
+				D8E22C9EA89F771400982EEF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C488AC4B2A4B85BC0098370A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC4A2A4B85BC0098370A /* EatMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C488AC4C2A4B85BC0098370A /* EatMe */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC4D2A4B85BC0098370A /* EatMeApp.swift */,
+				C4F11EA02A4E3D6E002DBB6D /* NavigationBarView.swift */,
+				C48153E32A4F9E080089A890 /* NavigationBarWithGeoView.swift */,
+				C4F11E9E2A4E3511002DBB6D /* TabBarView.swift */,
+				C488AC9A2A4BAF2D0098370A /* Extensions */,
+				C41ECBDB2A4BAF6F007D6520 /* DataAccess */,
+				C488AC632A4B89180098370A /* UserInterface */,
+				C41ECBDF2A4BB02E007D6520 /* Source */,
+				C488AC532A4B85C00098370A /* Preview Content */,
+			);
+			path = EatMe;
+			sourceTree = "<group>";
+		};
+		C488AC532A4B85C00098370A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC542A4B85C00098370A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C488AC632A4B89180098370A /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC642A4B89230098370A /* Categories */,
+				C488AC662A4B89370098370A /* Dishes */,
+				C488AC682A4B89460098370A /* ProductDetails */,
+				C488AC652A4B89310098370A /* Cart */,
+				C41ECBE82A4CE436007D6520 /* CommonViews */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		C488AC642A4B89230098370A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC6F2A4B89920098370A /* ViewModel */,
+				C488AC692A4B89520098370A /* View */,
+				C41ECBDE2A4BAFB8007D6520 /* Components */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C488AC652A4B89310098370A /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC722A4B89AD0098370A /* ViewModel */,
+				C488AC6A2A4B89700098370A /* View */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		C488AC662A4B89370098370A /* Dishes */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC752A4B89C10098370A /* ViewModel */,
+				C488AC6B2A4B89770098370A /* View */,
+			);
+			path = Dishes;
+			sourceTree = "<group>";
+		};
+		C488AC682A4B89460098370A /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC782A4B89DA0098370A /* ViewModel */,
+				C488AC6C2A4B897D0098370A /* View */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		C488AC692A4B89520098370A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC5B2A4B88000098370A /* CategoryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C488AC6A2A4B89700098370A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC5D2A4B884C0098370A /* CartView.swift */,
+				C4F11EC62A4F9027002DBB6D /* CartDishCellView.swift */,
+				C4F11EC42A4F8D26002DBB6D /* CartQuantityButtonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C488AC6B2A4B89770098370A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC5F2A4B88810098370A /* DishView.swift */,
+				C41ECBE02A4BB1FB007D6520 /* DishCellView.swift */,
+				C41ECBE92A4CE4C9007D6520 /* DishFilterElementView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C488AC6C2A4B897D0098370A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC612A4B890B0098370A /* ProductDetailsView.swift */,
+				C4F11EC22A4F859C002DBB6D /* ProductDetailsSmallButtonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C488AC6F2A4B89920098370A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC6D2A4B898E0098370A /* CategoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C488AC722A4B89AD0098370A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC702A4B89A80098370A /* CartViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C488AC752A4B89C10098370A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC732A4B89BE0098370A /* DishViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C488AC782A4B89DA0098370A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC762A4B89D60098370A /* ProductDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C488AC852A4BA5580098370A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC862A4BA5580098370A /* SF-Pro-Display-Regular.otf */,
+				C488AC882A4BA5580098370A /* SF-Pro-Display-Medium.otf */,
+				C488AC892A4BA5580098370A /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C488AC9A2A4BAF2D0098370A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C488AC812A4BA3DC0098370A /* Font+Extension.swift */,
+				C488AC7F2A4B9FF30098370A /* Number+Extension.swift */,
+				C41ECBE22A4C1E24007D6520 /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D8E22C9EA89F771400982EEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8557244CBD3BA8DAD924028 /* Pods_EatMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C488AC492A4B85BC0098370A /* EatMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C488AC582A4B85C00098370A /* Build configuration list for PBXNativeTarget "EatMe" */;
+			buildPhases = (
+				B3D08BEDDD525AF473FF1907 /* [CP] Check Pods Manifest.lock */,
+				C488AC462A4B85BC0098370A /* Sources */,
+				C488AC472A4B85BC0098370A /* Frameworks */,
+				C488AC482A4B85BC0098370A /* Resources */,
+				3B1F043909563779FC44B732 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EatMe;
+			packageProductDependencies = (
+				C48153E82A50DB690089A890 /* Realm */,
+				C48153EA2A50DB690089A890 /* RealmSwift */,
+			);
+			productName = EatMe;
+			productReference = C488AC4A2A4B85BC0098370A /* EatMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C488AC422A4B85BC0098370A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					C488AC492A4B85BC0098370A = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = C488AC452A4B85BC0098370A /* Build configuration list for PBXProject "EatMe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C488AC412A4B85BC0098370A;
+			packageReferences = (
+				C48153E72A50DB690089A890 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = C488AC4B2A4B85BC0098370A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C488AC492A4B85BC0098370A /* EatMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C488AC482A4B85BC0098370A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C488AC922A4BA5580098370A /* SF-Pro-Display-Semibold.otf in Resources */,
+				C488AC552A4B85C00098370A /* Preview Assets.xcassets in Resources */,
+				C488AC8F2A4BA5580098370A /* SF-Pro-Display-Regular.otf in Resources */,
+				C488AC522A4B85C00098370A /* Assets.xcassets in Resources */,
+				C488AC912A4BA5580098370A /* SF-Pro-Display-Medium.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B1F043909563779FC44B732 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EatMe/Pods-EatMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EatMe/Pods-EatMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EatMe/Pods-EatMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3D08BEDDD525AF473FF1907 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EatMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C488AC462A4B85BC0098370A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C41ECBE12A4BB1FB007D6520 /* DishCellView.swift in Sources */,
+				C488AC6E2A4B898E0098370A /* CategoryViewModel.swift in Sources */,
+				C488AC772A4B89D60098370A /* ProductDetailsViewModel.swift in Sources */,
+				C488AC822A4BA3DC0098370A /* Font+Extension.swift in Sources */,
+				C41ECBEA2A4CE4C9007D6520 /* DishFilterElementView.swift in Sources */,
+				C4F11EA12A4E3D6E002DBB6D /* NavigationBarView.swift in Sources */,
+				C488AC5C2A4B88000098370A /* CategoryView.swift in Sources */,
+				C48153E62A50D9900089A890 /* StorageService.swift in Sources */,
+				C488AC5E2A4B884C0098370A /* CartView.swift in Sources */,
+				C488AC7E2A4B9B1B0098370A /* CategoryCellView.swift in Sources */,
+				C488AC802A4B9FF30098370A /* Number+Extension.swift in Sources */,
+				C488AC712A4B89A80098370A /* CartViewModel.swift in Sources */,
+				C488AC4E2A4B85BC0098370A /* EatMeApp.swift in Sources */,
+				C48153E42A4F9E080089A890 /* NavigationBarWithGeoView.swift in Sources */,
+				C48153EF2A52367C0089A890 /* LocationService.swift in Sources */,
+				C488AC602A4B88810098370A /* DishView.swift in Sources */,
+				C48153ED2A50DC1B0089A890 /* DishDataBaseObject.swift in Sources */,
+				C488AC742A4B89BE0098370A /* DishViewModel.swift in Sources */,
+				C4F11EC72A4F9027002DBB6D /* CartDishCellView.swift in Sources */,
+				C488AC622A4B890B0098370A /* ProductDetailsView.swift in Sources */,
+				C4F11EC32A4F859D002DBB6D /* ProductDetailsSmallButtonView.swift in Sources */,
+				C488AC992A4BAC400098370A /* Dish.swift in Sources */,
+				C41ECBE32A4C1E24007D6520 /* Color+Extension.swift in Sources */,
+				C488AC7C2A4B94320098370A /* NetworkService.swift in Sources */,
+				C41ECBE72A4CE175007D6520 /* BlueButtonView.swift in Sources */,
+				C4F11E9F2A4E3511002DBB6D /* TabBarView.swift in Sources */,
+				C488AC7A2A4B8EB80098370A /* Category.swift in Sources */,
+				C4F11EC52A4F8D26002DBB6D /* CartQuantityButtonView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C488AC562A4B85C00098370A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C488AC572A4B85C00098370A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C488AC592A4B85C00098370A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D45A673136A967CD2F2D3349 /* Pods-EatMe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EatMe/Preview Content\"";
+				DEVELOPMENT_TEAM = MF2X2E877U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow it to find your city";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.y.chekalyuk.EatMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C488AC5A2A4B85C00098370A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 869F6D34D667107786848673 /* Pods-EatMe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EatMe/Preview Content\"";
+				DEVELOPMENT_TEAM = MF2X2E877U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow it to find your city";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.y.chekalyuk.EatMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C488AC452A4B85BC0098370A /* Build configuration list for PBXProject "EatMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C488AC562A4B85C00098370A /* Debug */,
+				C488AC572A4B85C00098370A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C488AC582A4B85C00098370A /* Build configuration list for PBXNativeTarget "EatMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C488AC592A4B85C00098370A /* Debug */,
+				C488AC5A2A4B85C00098370A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C48153E72A50DB690089A890 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C48153E82A50DB690089A890 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C48153E72A50DB690089A890 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		C48153EA2A50DB690089A890 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C48153E72A50DB690089A890 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C488AC422A4B85BC0098370A /* Project object */;
+}
