@@ -18,6 +18,7 @@ struct Dish: Decodable, Identifiable {
     let imageURL: String
     let tegs: [String]
     
+    
     private enum CodingKeys: String, CodingKey {
         case id
         case name
