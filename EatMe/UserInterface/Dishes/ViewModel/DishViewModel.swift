@@ -66,6 +66,10 @@ final class DishViewModel: ObservableObject {
         }
     }
     
+    func getFavoriteStatus(id: Int) -> Bool {
+        storageService.getFavoriteStatus(for: id)
+    }
+    
     private func fetchDishes() {
         cancellation = networkService.fetchDishes()
             .mapError({ (error) -> Error in

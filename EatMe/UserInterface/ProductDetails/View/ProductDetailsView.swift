@@ -20,7 +20,6 @@ struct ProductDetailsView: View {
             Color.clear
             ProductDetailsCardView(likeAction: likeAction, addInCartAction: addInCartAction, dish: dish, isLiked: isLiked)
         }
-        .onAppear { print("+++++++Ids: \(dish.id)") }
         .ignoresSafeArea()
     }
 }
@@ -53,8 +52,11 @@ struct ProductDetailsCardView: View {
                         VStack {
                             HStack {
                                 Spacer()
-                                ProductDetailsSmallButtonView(action: likeAction, type: .like, isLiked: isLiked)
-                                ProductDetailsSmallButtonView(action: {presentationMode.wrappedValue.dismiss()}, type: .close, isLiked: false)
+                                ProductDetailsSmallButtonView(action: likeAction, type: .like)
+                                    .onAppear {
+                                        print("+++++isLiked = \(isLiked)")
+                                    }
+                                ProductDetailsSmallButtonView(action: {presentationMode.wrappedValue.dismiss()}, type: .close)
                             }
                             .padding(.trailing, 4.dhs)
                             .padding(.top, 4.dhs)

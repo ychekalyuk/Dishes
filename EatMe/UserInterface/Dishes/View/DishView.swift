@@ -29,8 +29,6 @@ struct DishView: View {
     }
 }
 
-
-
 //MARK: - Subviews
 struct FilterGrid: View {
     @ObservedObject var viewModel: DishViewModel
@@ -52,6 +50,7 @@ struct DishesGrid: View {
     @ObservedObject var viewModel: DishViewModel
     private let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     @State private var isShowDetails = false
+    @State private var selectedDish: Dish? = nil
     
     var body: some View {
         ZStack {
@@ -59,16 +58,16 @@ struct DishesGrid: View {
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.filteredDishes, id: \.id) { dish in
                         VStack {
-                            Button(action: { isShowDetails.toggle() }) {
-                                DishCellView(name: dish.name, imageURL: dish.imageURL)
-                                Spacer()
-                                    .frame(height: 30.dvs)
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                            .fullScreenCover(isPresented: $isShowDetails) {
-                                ProductDetailsView(likeAction: {viewModel.setFavoriteStatus(id: dish.id)}, addInCartAction: {viewModel.addDishInCart(dish: dish)}, dish: dish, isLiked: false)
-                                    .padding(.horizontal, 16.dhs)
-                            }
+                            DishCellView(name: dish.name, imageURL: dish.imageURL)
+                                .onTapGesture {
+                                    selectedDish = dish
+                                }
+                                .fullScreenCover(item: $selectedDish) { dish in
+                                    ProductDetailsView(likeAction: { viewModel.setFavoriteStatus(id: dish.id) }, addInCartAction: { viewModel.addDishInCart(dish: dish) }, dish: dish, isLiked: false)
+                                        .padding(.horizontal, 16.dhs)
+                                }
+                            Spacer()
+                                .frame(height: 30.dvs)
                         }
                     }
                 }

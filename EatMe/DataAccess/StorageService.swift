@@ -43,7 +43,13 @@ class StorageService {
         write {
             let dish = realm.objects(DishDataBaseObject.self).where { $0.id == dishId }.first
             dish?.isFavorite.toggle()
+            print("dish togglet to \(dish?.isFavorite)")
         }
+    }
+    
+    func getFavoriteStatus(for dishId: Int) -> Bool {
+        let dish = realm.objects(DishDataBaseObject.self).where { $0.id == dishId }.first
+        return dish?.isFavorite ?? false
     }
     
     func getDishesFromCart(dishId: Int) -> DishDataBaseObject? {

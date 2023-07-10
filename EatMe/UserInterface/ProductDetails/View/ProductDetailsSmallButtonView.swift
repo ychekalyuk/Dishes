@@ -15,13 +15,15 @@ enum ProductDetailsSmallButtonType: String {
 struct ProductDetailsSmallButtonView: View {
     let action: () -> ()
     let type: ProductDetailsSmallButtonType
-    let isLiked: Bool
+    @State private var isLiked = false
     
     var body: some View {
-        Button(action: action) {
+        Button(action: { action()
+            if type == .like { isLiked.toggle() }
+        }) {
             ZStack {
                 Color(.EATME.White)
-                Image(type == .close ? "close" : (isLiked ? "like" : "like"))
+                Image(type == .close ? "close" : (isLiked ? "likeFilled" : "like"))
             }
             .frame(width: 40.dhs, height: 40.dhs)
             .cornerRadius(8.dhs)
@@ -33,7 +35,7 @@ struct ProductDetailsSmallButtonView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color(.yellow)
-            ProductDetailsSmallButtonView(action: {}, type: .like, isLiked: false)
+            ProductDetailsSmallButtonView(action: {}, type: .like)
         }
     }
 }
