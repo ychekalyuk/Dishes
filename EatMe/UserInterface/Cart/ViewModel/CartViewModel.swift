@@ -8,11 +8,7 @@
 import SwiftUI
 
 final class CartViewModel: ObservableObject {
-    @Published var dishes: [Dish] = [] {
-        didSet {
-            print(dishes.count)
-        }
-    }
+    @Published var dishes: [Dish] = []
     @Published var finalSum = 0
     
     private let storageService = StorageService()

@@ -8,5 +8,5 @@
 import SwiftUI
 
 final class ProductDetailsViewModel: ObservableObject {
-    @Published var dish = Dish(id: 0, name: "", price: 0, weight: 0, description: "", imageURL: "", tegs: [])
+    @Published var dish = Dish.emptyDish()
 }

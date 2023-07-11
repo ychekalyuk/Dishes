@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct DishFilterElementView: View {
+    @ObservedObject var viewModel: DishViewModel
     @State private var isSelected = false
     let title: String
-    @ObservedObject var viewModel: DishViewModel
     
     var body: some View {
         ZStack {

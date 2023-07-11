@@ -9,23 +9,35 @@ import SwiftUI
 
 struct DishView: View {
     @StateObject private var viewModel = DishViewModel()
+    @State private var isShowDetails = false
+    @State private var selectedDish = Dish.emptyDish()
     @Environment(\.presentationMode) var presentationMode
     let title: String
     
     var body: some View {
-        VStack {
-            NavigationBarView(title: title, backButtonAction: {
-                presentationMode.wrappedValue.dismiss()
-            })
-            FilterGrid(viewModel: viewModel)
-                .padding(.horizontal, 16.dhs)
-            DishesGrid(viewModel: viewModel)
-                .padding(.horizontal, 16.dhs)
-                .padding(.bottom, 88.dvs)
-            Spacer()
+        ZStack {
+            VStack {
+                NavigationBarView(title: title,
+                                  backButtonAction: { presentationMode.wrappedValue.dismiss() })
+                FilterGrid(viewModel: viewModel)
+                    .padding(.horizontal, 16.dhs)
+                DishesGridView(viewModel: viewModel,
+                               selectedDish: $selectedDish,
+                               isShowDetails: $isShowDetails)
+                    .padding(.horizontal, 16.dhs)
+                    .padding(.bottom, 88.dvs)
+                Spacer()
+            }
+            .ignoresSafeArea()
+            .navigationBarBackButtonHidden(true)
+            ProductDetailsView(isShowDetails: $isShowDetails,
+                               likeAction: { viewModel.setFavoriteStatus(id: selectedDish.id) },
+                               addInCartAction: { viewModel.addDishInCart(dish: selectedDish) },
+                               dish: selectedDish,
+                               isLiked: viewModel.getFavoriteStatus(id: selectedDish.id))
+                .opacity(isShowDetails ? 1 : 0)
+                .animation(.easeInOut(duration: 0.2), value: isShowDetails)
         }
-        .ignoresSafeArea()
-        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -38,7 +50,7 @@ struct FilterGrid: View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows) {
                 ForEach(viewModel.tags, id: \.self) { tag in
-                    DishFilterElementView(title: tag, viewModel: viewModel)
+                    DishFilterElementView(viewModel: viewModel, title: tag)
                 }
             }
         }
@@ -46,29 +58,24 @@ struct FilterGrid: View {
     }
 }
 
-struct DishesGrid: View {
+struct DishesGridView: View {
     @ObservedObject var viewModel: DishViewModel
+    @Binding var selectedDish: Dish
+    @Binding var isShowDetails: Bool
     private let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    @State private var isShowDetails = false
-    @State private var selectedDish: Dish? = nil
     
     var body: some View {
-        ZStack {
-            ScrollView(.vertical, showsIndicators: false) {
-                LazyVGrid(columns: columns) {
-                    ForEach(viewModel.filteredDishes, id: \.id) { dish in
-                        VStack {
-                            DishCellView(name: dish.name, imageURL: dish.imageURL)
-                                .onTapGesture {
-                                    selectedDish = dish
-                                }
-                                .fullScreenCover(item: $selectedDish) { dish in
-                                    ProductDetailsView(likeAction: { viewModel.setFavoriteStatus(id: dish.id) }, addInCartAction: { viewModel.addDishInCart(dish: dish) }, dish: dish, isLiked: false)
-                                        .padding(.horizontal, 16.dhs)
-                                }
-                            Spacer()
-                                .frame(height: 30.dvs)
-                        }
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVGrid(columns: columns) {
+                ForEach(viewModel.filteredDishes, id: \.id) { dish in
+                    VStack {
+                        DishCellView(name: dish.name, imageURL: dish.imageURL)
+                            .onTapGesture {
+                                selectedDish = dish
+                                isShowDetails.toggle()
+                            }
+                        Spacer()
+                            .frame(height: 30.dvs)
                     }
                 }
             }

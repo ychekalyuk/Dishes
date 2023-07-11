@@ -43,7 +43,6 @@ class StorageService {
         write {
             let dish = realm.objects(DishDataBaseObject.self).where { $0.id == dishId }.first
             dish?.isFavorite.toggle()
-            print("dish togglet to \(dish?.isFavorite)")
         }
     }
     

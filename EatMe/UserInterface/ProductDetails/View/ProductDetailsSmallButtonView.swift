@@ -13,9 +13,9 @@ enum ProductDetailsSmallButtonType: String {
 }
 
 struct ProductDetailsSmallButtonView: View {
+    @State private var isLiked = false
     let action: () -> ()
     let type: ProductDetailsSmallButtonType
-    @State private var isLiked = false
     
     var body: some View {
         Button(action: { action()

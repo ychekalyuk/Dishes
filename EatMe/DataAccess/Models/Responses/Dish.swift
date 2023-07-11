@@ -28,4 +28,8 @@ struct Dish: Decodable, Identifiable {
         case imageURL = "image_url"
         case tegs
     }
+    
+    static func emptyDish() -> Dish {
+        Dish(id: 0, name: "Some name", price: 0, weight: 0, description: "Some description", imageURL: "https://yoomag.ru/image/cache/no_image-1500x1500.png", tegs: [])
+    }
 }

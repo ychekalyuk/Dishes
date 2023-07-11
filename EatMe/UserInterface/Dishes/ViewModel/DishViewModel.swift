@@ -19,7 +19,7 @@ final class DishViewModel: ObservableObject {
     
     init() {
         fetchDishes()
-             print("Database FilePath : ", FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found")
+        print("Database FilePath : ", FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found")
     }
     
     func filterByTags(isSelected: Bool, tag: String) {
